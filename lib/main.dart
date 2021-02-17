@@ -1,27 +1,49 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'image.dart';
+import 'kolom.dart';
+
 void main() {
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
- Widget build(BuildContext context) {
- return MaterialApp(
- home: Scaffold(
- floatingActionButton:FloatingActionButton(
- onPressed: () {
- // Add your onPressed code here!
- },
- child: Icon(Icons.thumb_up),
- backgroundColor: Colors.pink,
- ),
- ),
- );
-
-}
-
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text("My App"),
+          backgroundColor: Colors.red,
+        ),
+        body: ListView(
+          children: <Widget>[
+            Row(
+              children: <Widget>[
+                Container(
+                    child: CupertinoButton(
+                  child: Text('Pertandingan Hari ini',
+                      style: TextStyle(color: Colors.black)),
+                  onPressed: () {},
+                )),
+                Container(
+                    child: CupertinoButton(
+                  child: Text('Berita Terbaru',
+                      style: TextStyle(color: Colors.black)),
+                  onPressed: () {},
+                )),
+              ],
+            ),
+            image(),
+            kolom(),
+            kolom(),
+            kolom(),
+          ],
+        ),
+      ),
+    );
+  }
 }
 
 // class MyHomePage extends StatefulWidget {
@@ -43,8 +65,7 @@ class MyApp extends StatelessWidget {
 // }
 
 // class _MyHomePageState extends State<MyHomePage> {
- 
- 
+
 //   @override
 //   Widget build(BuildContext context) {
 //     // This method is rerun every time setState is called, for instance as done
@@ -85,11 +106,11 @@ class MyApp extends StatelessWidget {
 //             Text(
 //               '1931710117',
 //             ),
-            
+
 //           ],
 //         ),
 //       ),
-     
+
 //     );
 //   }
 // }
