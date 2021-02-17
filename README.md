@@ -1,4 +1,2 @@
-# Praktikum
-![Tugas 1](img/Tugas1.jpeg)
-# Tugas 1
-![praktikum](img/praktikum.jpeg)
+# Tugas 2
+![tugas2](img/tugas2.jpeg)
